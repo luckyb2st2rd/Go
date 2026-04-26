@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -29,4 +30,20 @@ func main() {
 	"age":19
 }`
 	fmt.Println(json)
+
+	//Преобразование типов
+	var i int = 42
+	fmt.Println("Jetzt int: ", i)
+	var f float64 = float64(i)
+	fmt.Println("Jetzt float: ", f)
+	var u uint = uint(f)
+	fmt.Println("Jetzt uint: ", u)
+
+	str := strconv.Itoa(i)
+	fmt.Println("Теперь строка: ", str)
+	n, err := strconv.Atoi("42")
+	if err != nil {
+		fmt.Println("Ошибка преобразования")
+	}
+	fmt.Println("Теперь число: ", n)
 }
