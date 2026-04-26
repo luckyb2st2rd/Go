@@ -1,12 +1,32 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
-	name := ""
+	//Работа со строками
+	s := "Привет, Golang!"
 
-	fmt.Println("Как тебя зовут?")
-	fmt.Scanln(&name)
+	fmt.Println(len(s))
+	fmt.Println(strings.ToUpper(s))
+	fmt.Println(strings.Contains(s, "Golang"))
+	fmt.Println(strings.Replace(s, "Golang", "Python", 1))
 
-	fmt.Println("Меня зовут, " + name)
+	name := "Alex"
+	age := 19
+	if age <= 20 {
+		msg := fmt.Sprintf("Меня зовут %s, мне %d лет", name, age)
+		fmt.Println(msg)
+	} else {
+		msg := fmt.Sprintf("Меня зовут %s, мне %d года", name, age)
+		fmt.Println(msg)
+	}
+
+	json := `{
+	"name":"Alex",
+	"age":19
+}`
+	fmt.Println(json)
 }
