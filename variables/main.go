@@ -46,7 +46,7 @@ func main() {
 		Saturday
 	)
 
-	fmt.Println(Sunday)
+	fmt.Println(Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)
 
 	//степени двойки через iota
 	const (
