@@ -55,4 +55,5 @@ func main() {
 		GB
 	)
 	fmt.Println(KB, MB, GB)
+	fmt.Println(globalVar)
 }
